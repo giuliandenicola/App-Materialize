@@ -1,0 +1,25 @@
+<template name="mainLayout">
+<head>
+  <title>App#Materialize</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+
+<body>
+  <nav>
+    <ul id="slide-out" class="side-nav">
+      <li><a href="#!">First Sidebar Link</a></li>
+      <li><a href="#!">Second Sidebar Link</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+</nav>  
+	{{> content}}
+</body>
+</template>
+
+<template name="content">
+	<!-- 
+		Add this and the slide menu won't slide open
+		Remove this and you can slide open the menu
+	-->
+	{{> Template.dynamic template=content}}
+</template>
